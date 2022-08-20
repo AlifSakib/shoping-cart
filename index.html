@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,6 +18,9 @@
             colors: {
               clifford: "#da373d",
             },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
           },
         },
       };
@@ -19,5 +28,46 @@
 
     <title>Document</title>
   </head>
-  <body></body>
+  <body class="font-poppins">
+    <div class="grid bg-slate-500">
+      <div class="my-5 rounded-3xl bg-white w-96 mx-auto">
+        <!-- Product Image  -->
+        <div
+          class="bg-slate-200 rounded-t-3xl flex justify-center items-center"
+        >
+          <img class="w-72" src="./images/shoe-1.png" alt="" />
+        </div>
+        <!-- Product Details -->
+        <div class="mx-3">
+          <div class="flex justify-between text-2xl font-bold mt-4">
+            <div>
+              <h1>Nike Smart Shoes</h1>
+            </div>
+            <div>
+              <h3>49$</h3>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mt-4">Size</h3>
+          <div class="grid grid-cols-6 mx-auto gap-3 text-center mt-4">
+            <div class="bg-slate-100 rounded-lg py-2">37</div>
+            <div class="bg-slate-100 rounded-lg py-2">38</div>
+            <div class="bg-slate-100 rounded-lg py-2">39</div>
+            <div class="bg-slate-100 rounded-lg py-2">40</div>
+            <div class="bg-slate-100 rounded-lg py-2">41</div>
+            <div class="bg-slate-100 rounded-lg py-2">42</div>
+          </div>
+          <div
+            class="bg-blue-500 text-center font-semibold text-lg text-white rounded-lg mt-4 mb-8"
+          >
+            <button class="py-1">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-white text-xl font-bold space-y-3">
+        <h1>Product Name :</h1>
+        <h3>Product Size :</h3>
+        <h1>Product Price :</h1>
+      </div>
+    </div>
+  </body>
 </html>
